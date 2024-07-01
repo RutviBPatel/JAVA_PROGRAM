@@ -10,7 +10,10 @@ public class Main {
         crudoperation.updateData("Utsav patel", "MScIT", "Ahmedabad", "7845127845");
         crudoperation.getData();
 
-        //crudoperation.deleteData("Herit vekariya");
+        crudoperation.deleteData("Herit vekariya");
+        crudoperation.getData();
+        
+        crudoperation.search("Utsav patel");
         crudoperation.getData();
     }
 }

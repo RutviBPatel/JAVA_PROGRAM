@@ -54,6 +54,24 @@ public class crudoperation {
             e.printStackTrace();
         }
     }
+    
+    public static void search(String name) {
+        String query = "select * from stud where name = '" + name + "'";
+        try {
+            ResultSet resultSet = statement.executeQuery(query);
+            if (resultSet.next()) {
+                System.out.println(
+                        resultSet.getString("name") + ", " +
+                                resultSet.getString("field") + ", " +
+                                resultSet.getString("city") + ", " +
+                                resultSet.getString("contact_no"));
+            } else {
+                System.out.println("No record found" + name);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
     public static void getData() {
         String query = "select * from stud";

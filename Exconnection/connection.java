@@ -14,7 +14,7 @@ public class connection {
 
     public connection() {
         try {
-            // Step 2: Load the drivers
+            // Step 2: Drivers
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Step 3: Establish the connection
